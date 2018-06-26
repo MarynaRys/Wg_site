@@ -1,0 +1,46 @@
+//use http://www.font2web.com to generate all font formats
+.add-font(@font-url, @font-name, @font-weight: normal, @font-style: normal) {
+  font-family: @font-name;
+  src: url('@{font-folder}@{font-url}.eot'); // IE9 Compat Modes 
+  src: url('@{font-folder}@{font-url}.eot?#iefix') format('embedded-opentype'), // IE6-IE8 
+  url('@{font-folder}@{font-url}.woff') format('woff'), // Pretty Modern Browsers 
+  url('@{font-folder}@{font-url}.ttf') format('truetype'), // Safari, Android, iOS 
+  url('@{font-folder}@{font-url}.svg#@{font-name}') format('svg'); // Legacy iOS  
+  font-weight: @font-weight;
+  font-style: @font-style;
+}
+
+.transition(@prop: all, @time: 0.3s, @ease: ease-in-out) {
+  transition: @prop @time @ease;
+}
+.bg_image(@img, @pos:center center,@att:scroll){
+	//background-image: linear-gradient(to top, #fefcea, #f1da36),url('@{img-folder}@{img}') ;
+	background-position: @pos;
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-attachment: @att;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,000000+100&0.63+0,0.63+100 */
+background: -moz-linear-gradient(top,  rgba(255,255,255,0.63) 0%, rgba(0,0,0,0.63) 100%),url('@{img-folder}@{img}') ; /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,0.63) 0%,rgba(0,0,0,0.63) 100%),url('@{img-folder}@{img}') ; /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,0.63) 0%,rgba(0,0,0,0.63) 100%),url('@{img-folder}@{img}') ; /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1ffffff', endColorstr='#a1000000',GradientType=0 ); /* IE6-9 */
+
+ }
+ .bg_image2(@img, @pos:center center,@att:scroll){
+  background-image: url('@{img-folder}@{img}') ;
+  background-position: @pos;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+  background-attachment: @att;
+  height: 50px;
+}
+.bg_image3(@img, @pos:center center,@att:scroll){
+  background-image: url('@{img-folder}@{img}') ;
+  background-position: @pos;
+  background-repeat: no-repeat!important;
+  background-size: cover!important;
+  background-attachment: @att;
+}
+.logo{
+
+}
